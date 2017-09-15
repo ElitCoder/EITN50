@@ -2,7 +2,7 @@ CPP_FILES := $(wildcard src/*.cpp)
 OBJ_FILES := $(addprefix obj/,$(notdir $(CPP_FILES:.cpp=.o)))
 CC_FLAGS := -std=c++11
 CC_FLAGS +=	-Wall -Wextra -pedantic-errors -Wold-style-cast
-CC_FLAGS += -g -O3
+CC_FLAGS += -O3
 LD_LIBS := -lcryptopp
 
 bin/ObjectSecurity: $(OBJ_FILES)

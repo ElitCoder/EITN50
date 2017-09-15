@@ -5,13 +5,14 @@
 
 using namespace std;
 
-int main(int argc, char **argv) {
-    Cryptography::initialize();
-    
+int main(int argc, char **argv) {    
     bool server = true;
     
     if(argc > 1) {
         server = false;
+    }
+    
+    if(argv[0]) {
     }
     
     NetworkCommunication networkCommunication(20000, server);
@@ -21,14 +22,6 @@ int main(int argc, char **argv) {
     } else {
         networkCommunication.runClient();
     }
-    
-    /*
-    string encrypted = encrypt("hej magnus");
-    string decrypted = decrypt(encrypted);
-    
-    cout << "Encrypted text: " << encrypted << endl;
-    cout << "Decrypted text: " << decrypted << endl;
-    */
     
     return 0;
 }

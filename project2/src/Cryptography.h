@@ -5,10 +5,13 @@
 
 class Cryptography {
 public:
-    static void initialize();
+    static void initialize(const int secret);
     
-    static void encrypt(const std::string &plainText, std::string &encryptedText);
-    static void decrypt(const std::string &encryptedText, std::string &decryptedText);
+    static std::string encrypt(const std::string &plainMessage);
+    static std::string decrypt(const std::string &encryptedMessage);
+    
+    static std::string createHMAC(const std::string &encodedMessage);
+    static bool checkHMAC(const std::string &hmac, const std::string &encryptedMessage);
     
     static byte *m_iv, *m_key;
 };
