@@ -1,7 +1,7 @@
 #ifndef CRYPTOGRAPHY_H
 #define CRYPTOGRAPHY_H
 
-#include <crypto++/modes.h>
+#include "crypto++/modes.h"
 
 class Cryptography {
 public:
