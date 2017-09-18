@@ -1,0 +1,11 @@
+Building the project:
+
+Type 'make' (without quotes) in the directory containing this README
+
+Running the binary as server & client:
+
+Start the server by running
+./bin/ObjectSecurity
+
+Then start the client by running
+./bin/ObjectSecurity 1
